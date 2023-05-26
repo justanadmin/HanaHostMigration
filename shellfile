@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Run the HDB version command and store the output in a variable
+hana_version=$(HDB version | grep -i version)
+# Extract the version number from the output
+version_number=$(echo $hana_version | awk -F ':' '{print $2}' | tr -d ' ')
+# Set the file path to store the version information
+file_path="/path/to/version.txt"
+# Create the version information string
+version_info="SAP HANA version: $version_number"
+# Write the version information to the file
+echo $version_info > $file_path
+
+
+
