@@ -12,4 +12,16 @@ version_info="SAP HANA version: $version_number"
 echo $version_info > $file_path
 
 
+#!/bin/bash
+
+# Source directory path
+source_dir="/path/to/source_directory"
+
+# Destination directory path
+destination_dir="/path/to/destination_directory"
+
+# Copy INI files from source to destination
+cp "${source_dir}"/*.ini "${destination_dir}"
+
+echo "INI files copied from ${source_dir} to ${destination_dir}"
 
