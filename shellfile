@@ -25,3 +25,8 @@ cp "${source_dir}"/*.ini "${destination_dir}"
 
 echo "INI files copied from ${source_dir} to ${destination_dir}"
 
+
+
+---------Get Values from env after = -----------------
+
+variable=$(env | grep -oP "(?<==).*")
